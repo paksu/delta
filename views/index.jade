@@ -2,6 +2,7 @@ extends layout
 
 block content
     each pullRequest in data
-        p #{pullRequest.user.login}
-        img(src="#{pullRequest.user.avatar_url}")
+        strong.
+            #{pullRequest.user.login}
+            |   #{pullRequest.merged_at}
         != pullRequest.renderedBody
